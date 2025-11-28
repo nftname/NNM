@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <title>Explore Market | NNM Exchange</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='50%25'%3E%3Cstop offset='0%25' style='stop-color:%23E6A800'/%3E%3Cstop offset='20%25' style='stop-color:%23FCD535'/%3E%3Cstop offset='50%25' style='stop-color:%23FFF8D6'/%3E%3Cstop offset='80%25' style='stop-color:%23FCD535'/%3E%3Cstop offset='100%25' style='stop-color:%23E6A800'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 5 L93.3 30 V80 L50 105 L6.7 80 V30 Z' fill='none' stroke='url(%23g)' stroke-width='5'/%3E%3Cpath d='M50 15 L84.6 35 V75 L50 95 L15.4 75 V35 Z' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Cpath d='M50 25 L78 41 V72 L50 88 L22 72 V41 Z M50 38 L32 48 V65 L50 75 L68 65 V48 Z M50 50 L40 56 L40 62 L50 68 L60 62 L60 56 Z' fill='url(%23g)'/%3E%3C/svg%3E">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Rajdhani:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="explore.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom border-secondary">
+      <div class="container-fluid px-4"> 
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="goldBar" x1="0%" y1="0%" x2="100%" y2="50%"><stop offset="0%" style="stop-color:#E6A800"/><stop offset="20%" style="stop-color:#FCD535"/><stop offset="50%" style="stop-color:#FFF8D6"/><stop offset="80%" style="stop-color:#FCD535"/><stop offset="100%" style="stop-color:#E6A800"/></linearGradient></defs>
+            <path d="M50 5 L93.3 30 V80 L50 105 L6.7 80 V30 Z" fill="none" stroke="url(#goldBar)" stroke-width="5" />
+            <path d="M50 15 L84.6 35 V75 L50 95 L15.4 75 V35 Z" fill="none" stroke="url(#goldBar)" stroke-width="4" />
+            <path d="M50 25 L78 41 V72 L50 88 L22 72 V41 Z M50 38 L32 48 V65 L50 75 L68 65 V48 Z M50 50 L40 56 L40 62 L50 68 L60 62 L60 56 Z" fill="url(#goldBar)" fill-rule="evenodd"/>
+          </svg>
+          <span class="brand-text ms-2 text-gold-metallic fw-bold">NFT NAME</span>
+        </a>
+
+        <div class="d-flex align-items-center gap-3 d-lg-none order-lg-last">
+            <w3m-button balance="hide" size="sm"></w3m-button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nnmNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="nnmNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="explore.html">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mint</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Stats</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+                    <ul class="dropdown-menu dropdown-menu-dark shadow compact-dropdown">
+                        <li><a class="dropdown-item small" href="#">Whitepaper</a></li>
+                        <li><a class="dropdown-item small" href="#">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center gap-3 d-none d-lg-flex">
+                <div class="position-relative">
+                    <input type="text" class="search-bar-header" placeholder="Search collection...">
+                    <i class="bi bi-search search-icon-header"></i>
+                </div>
+                <w3m-button balance="hide" size="sm"></w3m-button>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="ticker-spacer mt-0">
+        <div class="market-ticker">
+          <div class="ticker-content">
+            <span class="text-sub">VOL 24H:</span> <span class="text-white">1.2M MATIC</span> <span class="text-up">▲ 5.4%</span> &nbsp;|&nbsp; 
+            <span class="text-sub">FLOOR:</span> <span class="text-white">500 MATIC</span> &nbsp;|&nbsp; 
+            <span class="text-gold-metallic">HOT:</span> <span class="text-white">KING sold for 1,500 MATIC</span>
+          </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4 px-4">
+        
+        <div class="mb-4">
+            <h3 class="text-white fw-bold">Marketplace <span class="text-gold-metallic">Live</span></h3>
+            <p class="text-muted small">Trade Sovereign Identity Assets with zero latency.</p>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 border-bottom border-secondary pb-3">
+            <div class="d-flex gap-4">
+                <button class="tab-btn active">Trending</button>
+                <button class="tab-btn">Top Assets</button>
+                <button class="tab-btn">Recent</button>
+            </div>
+            <div class="d-flex gap-2 mt-3 mt-md-0">
+                <div class="dropdown"><button class="btn btn-sm btn-dark border-secondary dropdown-toggle text-muted" type="button" data-bs-toggle="dropdown">Filter: All Tiers</button></div>
+                <div class="dropdown"><button class="btn btn-sm btn-dark border-secondary dropdown-toggle text-muted" type="button" data-bs-toggle="dropdown">24H Volume</button></div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-dark table-hover align-middle market-table">
+                <thead>
+                    <tr>
+                        <th width="5%">#</th>
+                        <th width="25%">Asset Name</th>
+                        <th width="15%">Floor Price</th>
+                        <th width="10%">24h Change</th>
+                        <th width="15%">24h Volume</th>
+                        <th width="10%">Owners</th>
+                        <th width="10%">Last 7 Days</th>
+                        <th width="10%" class="text-end">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr class="asset-row" onclick="window.location.href='name.html?asset=KING'">
+                        <td class="fw-bold text-gold-metallic fs-6">1</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="tier-icon diamond-glow"><i class="bi bi-gem"></i></div>
+                                <div>
+                                    <span class="asset-name-text text-white">KING</span>
+                                    <i class="bi bi-patch-check-fill text-gold-metallic ms-1"></i>
+                                    <div class="small text-muted">Gen-0 #001</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="fw-bold">1,500 MATIC<br><span class="small text-muted">$990</span></td>
+                        <td class="text-up fw-bold">+12.5%</td>
+                        <td>450K</td>
+                        <td>1</td>
+                        <td><svg class="mini-chart chart-up" viewBox="0 0 100 30"><path d="M0 25 L20 20 L40 22 L60 10 L80 15 L100 5" /></svg></td>
+                        <td class="text-end"><button class="btn btn-gold-metallic btn-buy-sm">Buy</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center border-top border-secondary pt-3 pb-5">
+            <div class="text-muted small">Showing 1-10 of 1,240 Assets</div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="btn-group ms-3">
+                    <button class="btn btn-sm btn-dark border-secondary text-muted"><i class="bi bi-chevron-left"></i></button>
+                    <button class="btn btn-sm btn-dark border-secondary text-white active">1</button>
+                    <button class="btn btn-sm btn-dark border-secondary text-muted">2</button>
+                    <button class="btn btn-sm btn-dark border-secondary text-muted"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="container"><div class="text-center text-muted small">© 2025 NNM Protocol.</div></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="market.js"></script>
+    
+    <script type="module" src="script.js"></script>
+
+  </body>
+</html>

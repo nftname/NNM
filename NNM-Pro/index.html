@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <title>NFTNAME | Sovereign Identity Exchange</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='50%25'%3E%3Cstop offset='0%25' style='stop-color:%23E6A800'/%3E%3Cstop offset='20%25' style='stop-color:%23FCD535'/%3E%3Cstop offset='50%25' style='stop-color:%23FFF8D6'/%3E%3Cstop offset='80%25' style='stop-color:%23FCD535'/%3E%3Cstop offset='100%25' style='stop-color:%23E6A800'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 5 L93.3 30 V80 L50 105 L6.7 80 V30 Z' fill='none' stroke='url(%23g)' stroke-width='5'/%3E%3Cpath d='M50 15 L84.6 35 V75 L50 95 L15.4 75 V35 Z' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Cpath d='M50 25 L78 41 V72 L50 88 L22 72 V41 Z M50 38 L32 48 V65 L50 75 L68 65 V48 Z M50 50 L40 56 L40 62 L50 68 L60 62 L60 56 Z' fill='url(%23g)'/%3E%3C/svg%3E">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Rajdhani:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="explore.css">
+
+    <style>
+        .pedestal-container { position: relative; width: 280px; height: 320px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+        .nnm-modal-content { background-color: #1e2329; border-radius: 12px; border: 1px solid #2b3139; box-shadow: 0 20px 50px rgba(0,0,0,0.95); font-family: 'Inter', sans-serif; }
+        .custom-modal-width { max-width: 95%; }
+        @media (min-width: 992px) { .custom-modal-width { max-width: 65% !important; } }
+        .modal-body { max-height: 55vh; overflow-y: auto; padding: 20px 30px; background-color: #1e2329; text-align: left; }
+        .modal-body::-webkit-scrollbar { width: 6px; }
+        .modal-body::-webkit-scrollbar-track { background: #1e2329; }
+        .modal-body::-webkit-scrollbar-thumb { background: #474d57; border-radius: 4px; }
+        .modal-footer { border-top: 1px solid #2b3139; padding: 15px 20px; display: flex; gap: 10px; justify-content: flex-end; }
+        .btn-cancel-custom { background-color: transparent; color: #848e9c; border: 1px solid #2b3139; font-weight: 500; font-size: 14px; padding: 8px 24px; border-radius: 4px; transition: all 0.2s; }
+        .btn-cancel-custom:hover { background-color: #2b3139; color: #eaecef; }
+        .btn-warning-custom { background: linear-gradient(135deg, #F0B90B 0%, #FCD535 50%, #F0B90B 100%); border: none; color: #1E2329; font-weight: 600; font-size: 14px; padding: 8px 24px; border-radius: 4px; transition: all 0.2s ease; }
+        .btn-warning-custom:hover { filter: brightness(1.1); }
+        .text-warning-custom { color: #FCD535 !important; }
+        .legal-text-container p { font-size: 13px; line-height: 1.5; margin-bottom: 12px; color: #b7bdc6; }
+        .legal-text-container h6 { font-size: 14px; margin-top: 20px; margin-bottom: 10px; color: #FCD535; }
+        .legal-text-container strong { color: #eaecef; }
+        .legal-text-container ul { font-size: 13px; color: #b7bdc6; padding-left: 20px; }
+    </style>
+  </head>
+  <body>
+
+    <div class="modal fade" id="legalModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable custom-modal-width">
+            <div class="modal-content nnm-modal-content">
+                <div class="modal-header border-bottom-0 pb-2">
+                    <h5 class="modal-title fw-bold text-white fs-5">Protocol Terms of Use</h5>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="legal-text-container">
+                        <p class="small text-muted mb-3">Last Updated: November 2025</p>
+                        
+                        <p><strong>IMPORTANT NOTICE:</strong> By accessing, browsing, minting, or otherwise using the NFT Name Market (NNM) interface (the "Site") and protocol, you acknowledge that you have read, understood, and agree to be bound by the following Terms. If you do not agree to these Terms, you must stop using the Site immediately.</p>
+
+                        <hr class="border-secondary my-3">
+
+                        <h6 class="text-warning-custom fw-bold mt-4">I. TERMS OF SERVICE & LIABILITY</h6>
+
+                        <p><strong>1. ELIGIBILITY & AGE RESTRICTION</strong><br>
+                        By using the Protocol, you represent and warrant that you are at least 18 years old and have the full right, power, and authority to enter into this agreement in your jurisdiction.</p>
+
+                        <p><strong>2. PROTOCOL NATURE: INTERFACE ONLY</strong><br>
+                        NNM operates exclusively as a non-custodial, decentralized application (dApp) and a neutral technical interface to the public Polygon blockchain network.
+                        <ul class="small">
+                            <li><strong>Interface Only:</strong> NNM controls only the visual interface. The underlying smart contracts on the Polygon blockchain are autonomous, immutable, and remain accessible independently of the Site.</li>
+                            <li><strong>No Custody:</strong> NNM does not have custody, possession, or control of your digital assets, cryptocurrencies, or private keys at any time.</li>
+                            <li><strong>No Brokerage:</strong> We are not a broker, financial institution, creditor, or tax advisor. The services are purely administrative and technical.</li>
+                        </ul>
+                        </p>
+
+                        <p><strong>3. NO PROFESSIONAL ADVICE DISCLAIMER</strong><br>
+                        NNM does not provide financial, investment, legal, or tax advice. All information on the Site is for informational and technical purposes only. You acknowledge that you use the Protocol at your own decision and risk.</p>
+
+                        <p><strong>4. LIMITATION OF LIABILITY ("AS IS")</strong><br>
+                        To the fullest extent permitted by law, <strong>NNM disclaims all liability</strong> for any damages, lost profits, lost data, smart-contract vulnerabilities, blockchain failures, gas losses, or unauthorized wallet access. The Service is provided "AS IS" without warranties of any kind.</p>
+
+                        <p><strong>5. USER RESPONSIBILITY & INDEMNIFICATION</strong><br>
+                        You acknowledge and assume full, non-revocable liability for any content (Name/Text) you choose to mint.
+                        <ul class="small">
+                            <li><strong>No Monitoring:</strong> NNM does not review, monitor, or verify the legality of any Name/Text submitted by users. All responsibility is fully transferred to the user.</li>
+                            <li><strong>Indemnity:</strong> You explicitly agree to indemnify, defend, and hold NNM harmless from any legal claims arising from your violation of third-party rights (e.g., Trademarks).</li>
+                        </ul>
+                        </p>
+
+                        <p><strong>6. ASSET CLASSIFICATION & TRADEMARK RIGHTS</strong><br>
+                        NFTs traded on NNM are "Visual Identity Assets".
+                        <ul class="small">
+                            <li><strong>No Commercial Rights:</strong> Purchasing or minting a Name NFT does <strong>NOT</strong> grant you any right to use the text/name in commerce, branding, real-world products, or domain registrations.</li>
+                            <li><strong>Tax Responsibility:</strong> You are solely responsible for determining and paying any taxes that apply to your transactions.</li>
+                        </ul>
+                        </p>
+
+                        <p><strong>7. PROHIBITED ACTIVITIES</strong><br>
+                        You agree NOT to use the NNM Protocol for: Money laundering, terrorist financing, sanctions violation, or market manipulation ("Wash Trading"). NNM reserves the right to restrict access to any wallet suspected of illicit activity.</p>
+
+                        <p><strong>8. GOVERNING LAW & DISPUTE RESOLUTION</strong><br>
+                        Any dispute shall be resolved through <strong>binding individual arbitration</strong>. Class-action lawsuits are waived. This agreement is governed by the laws of <strong>Singapore</strong> (or applicable international arbitration standards), without regard to conflict of law principles.</p>
+
+                        <hr class="border-secondary my-3">
+
+                        <h6 class="text-warning-custom fw-bold">II. PRIVACY POLICY</h6>
+                        <p><strong>9. DATA POLICY:</strong> NNM adheres to a strict maximum privacy policy. We do not collect names, emails, or IP addresses. We only display public on-chain data.</p>
+
+                        <hr class="border-secondary my-3">
+
+                        <h6 class="text-warning-custom fw-bold">III. INTELLECTUAL PROPERTY</h6>
+                        <p><strong>10. TAKEDOWN MECHANISM (DMCA):</strong> NNM respects intellectual property rights. Upon receipt of a valid infringement notice, NNM reserves the right to immediately delist (remove visual display) the alleged infringing NFT from the interface. This action does not remove the token from the blockchain.</p>
+                    </div>
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel-custom" id="cancelBtn">Cancel</button>
+                    <button type="button" class="btn btn-warning-custom" id="acceptBtn">I Accept & Enter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom border-secondary">
+      <div class="container-fluid px-4"> 
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="goldBar" x1="0%" y1="0%" x2="100%" y2="50%"><stop offset="0%" style="stop-color:#E6A800"/><stop offset="20%" style="stop-color:#FCD535"/><stop offset="50%" style="stop-color:#FFF8D6"/><stop offset="80%" style="stop-color:#FCD535"/><stop offset="100%" style="stop-color:#E6A800"/></linearGradient></defs>
+            <path d="M50 5 L93.3 30 V80 L50 105 L6.7 80 V30 Z" fill="none" stroke="url(#goldBar)" stroke-width="5" />
+            <path d="M50 15 L84.6 35 V75 L50 95 L15.4 75 V35 Z" fill="none" stroke="url(#goldBar)" stroke-width="4" />
+            <path d="M50 25 L78 41 V72 L50 88 L22 72 V41 Z M50 38 L32 48 V65 L50 75 L68 65 V48 Z M50 50 L40 56 L40 62 L50 68 L60 62 L60 56 Z" fill="url(#goldBar)" fill-rule="evenodd"/>
+          </svg>
+          <span class="brand-text ms-2 text-gold-metallic fw-bold">NFT NAME</span>
+        </a>
+        
+        <div class="d-flex align-items-center gap-3 d-lg-none order-lg-last">
+            <w3m-button balance="hide" size="sm"></w3m-button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nnmNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="nnmNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="explore.html">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mint</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Stats</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+                    <ul class="dropdown-menu dropdown-menu-dark shadow compact-dropdown">
+                        <li><a class="dropdown-item small" href="#">Whitepaper</a></li>
+                        <li><a class="dropdown-item small" href="#">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center gap-3 d-none d-lg-flex">
+                <div class="position-relative"><input type="text" class="search-bar-header" placeholder="Search collection..."><i class="bi bi-search search-icon-header"></i></div>
+                <w3m-button balance="hide" size="sm"></w3m-button>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="ticker-spacer mt-0">
+        <div class="market-ticker">
+          <div class="ticker-content">
+            <span class="text-sub">VOL 24H:</span> <span class="text-white">1.2M MATIC</span> <span class="text-up">▲ 5.4%</span> &nbsp;|&nbsp; 
+            <span class="text-sub">FLOOR:</span> <span class="text-white">500 MATIC</span> &nbsp;|&nbsp; 
+            <span class="text-gold-metallic">HOT:</span> <span class="text-white">KING sold for 1,500 MATIC</span>
+          </div>
+        </div>
+    </div>
+
+    <div class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 hero-content-lift">
+                <h1 class="mb-3 text-white hero-title-refined">Buy, Sell & <span class="text-gold-metallic">Mint</span> Sovereign Identities</h1>
+                <p class="hero-sub text-white small-sub">The world's first decentralized exchange for Visual Identity Assets on Polygon.</p>
+                <div class="hero-search-box position-relative compact-box">
+                    <input type="text" class="hero-input compact-input" placeholder="Enter your desired name...">
+                    <button class="btn btn-gold-metallic position-absolute end-0 top-0 h-100 px-4 rounded-end fw-bold small-btn">Check Availability</button>
+                </div>
+                <div class="d-flex gap-4 text-white small mt-4 opacity-75">
+                    <div><i class="bi bi-fire text-danger me-1"></i> <strong>500+</strong> Minted</div>
+                    <div><i class="bi bi-bar-chart-line text-success me-1"></i> <strong>1.2M</strong> Vol</div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block text-center position-relative"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pb-5 pt-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="fw-bold m-0 text-white">Top Collections</h5>
+        <button class="btn-view-all">View All <i class="bi bi-arrow-right"></i></button>
+      </div>
+      <div class="table-responsive">
+        <table class="ranking-table">
+          <thead>
+            <tr><th width="5%">#</th><th width="45%">Collection</th><th width="25%">Floor Price</th><th width="25%" class="text-end">Volume</th></tr>
+          </thead>
+          <tbody>
+            <tr class="ranking-row">
+              <td class="fw-bold text-gold-metallic">1</td>
+              <td><div class="collection-img"></div><span class="fw-bold text-white">The Immortals</span><i class="bi bi-patch-check-fill text-gold-metallic ms-1"></i></td>
+              <td class="fw-bold text-white">1,500 MATIC</td><td class="text-end text-white">150K</td>
+            </tr>
+            <tr class="ranking-row">
+              <td class="fw-bold text-silver">2</td>
+              <td><div class="collection-img"></div><span class="fw-bold text-white">Elite Gen-1</span><i class="bi bi-patch-check-fill text-gold-metallic ms-1"></i></td>
+              <td class="fw-bold text-white">500 MATIC</td><td class="text-end text-white">85K</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="container"><div class="text-center text-muted small">© 2025 NNM Protocol.</div></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var myModal = new bootstrap.Modal(document.getElementById('legalModal'), { backdrop: 'static', keyboard: false });
+            if (!localStorage.getItem('nnm_legal_accepted')) myModal.show();
+            document.getElementById('acceptBtn').addEventListener('click', function() { localStorage.setItem('nnm_legal_accepted', 'true'); myModal.hide(); });
+            document.getElementById('cancelBtn').addEventListener('click', function() { window.location.href = "https://google.com"; });
+        });
+    </script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
