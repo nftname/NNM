@@ -1,39 +1,53 @@
-/* EXPLORE STYLES (V36.0 - PRO TRADER) */
+/* --- EXPLORE STYLES (V37.0 - PRO TRADER) --- */
 
 /* 1. Ticker Animation */
 @keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
-body { background-color: #0b0e11; }
+body { background-color: var(--bg-dark); color: var(--text-main); }
 
 /* 2. TABS & FILTERS */
 .tab-btn {
     background: none;
     border: none;
-    color: #848e9c;
+    color: var(--text-sub);
     font-weight: 600;
     font-size: 16px;
     padding-bottom: 10px;
     border-bottom: 3px solid transparent;
     transition: all 0.2s;
     margin-right: 20px;
+    cursor: pointer;
 }
-.tab-btn:hover { color: #eaecef; }
+.tab-btn:hover { color: var(--text-main); }
 .tab-btn.active {
-    color: #eaecef;
-    border-bottom: 3px solid #FCD535; /* Gold Active Line */
+    color: var(--text-main);
+    border-bottom: 3px solid var(--gold-button);
 }
 
-.filter-btn { color: #eaecef; background-color: #1e2329; border: 1px solid #1e2329; font-size: 14px; font-weight: 500; padding: 6px 12px; }
-.filter-btn:hover, .filter-btn.show { border-color: #FCD535; color: #FCD535; }
+.filter-btn {
+    color: var(--text-main);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+.filter-btn:hover, .filter-btn.show {
+    border-color: var(--gold-button);
+    color: var(--gold-button);
+    background-color: var(--bg-header);
+}
 
 /* 3. MARKET TABLE STYLES */
-.market-table { margin-top: 10px; }
+.market-table { margin-top: 10px; width: 100%; }
 
 /* Table Header */
 .market-table thead th {
-    background-color: #0b0e11;
-    border-bottom: 1px solid #2b3139;
-    color: #848e9c;
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--border);
+    color: var(--text-sub);
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
@@ -54,37 +68,75 @@ body { background-color: #0b0e11; }
 
 /* Table Body */
 .market-table tbody td {
-    background-color: #0b0e11;
-    border-bottom: 1px solid #1e2329;
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--bg-card);
     padding: 16px 8px;
-    color: #eaecef;
+    color: var(--text-main);
     font-size: 13px;
     font-weight: 400;
     vertical-align: middle;
 }
 
-/* Row Hover: Subtle Grey Highlight */
+/* Row Hover: Dark Highlight */
 .asset-row { transition: background-color 0.2s; }
 .asset-row:hover td {
-    background-color: #181a20; /* Dark Grey Highlight */
+    background-color: var(--bg-card);
     cursor: pointer;
 }
 
-.asset-name-text { font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.5px; }
+.asset-name-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
 
-/* 4. NEW ICONS (SVG Code) */
-.tier-icon-svg { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
+/* 4. TIER ICONS */
+.tier-icon, .tier-icon-svg { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
 .tier-icon-svg svg { width: 100%; height: 100%; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2)); }
 
-/* 5. TREND BAR (Heatmap Style) */
+/* 5. TREND BAR (Mini Charts / Heatmap) */
 .trend-bar {
     height: 4px;
     border-radius: 2px;
     display: block;
 }
-.bg-gradient-up { background: linear-gradient(to right, #0ecb81, #00ff88); box-shadow: 0 0 5px rgba(14, 203, 129, 0.5); }
+.bg-gradient-up { background: linear-gradient(to right, var(--up-green), #00ff88); box-shadow: 0 0 5px rgba(14, 203, 129, 0.5); }
 .bg-gradient-down { background: linear-gradient(to right, #f6465d, #ff002b); box-shadow: 0 0 5px rgba(246, 70, 93, 0.5); }
 
-.btn-buy-sm { font-size: 12px; padding: 6px 16px; font-weight: 600; border-radius: 4px; }
-.btn-outline-gold { border: 1px solid #FCD535; color: #FCD535; background: transparent; font-size: 12px; padding: 6px 16px; font-weight: 600; border-radius: 4px; }
-.btn-outline-gold:hover { background: #FCD535; color: #000; }
+/* 6. BUTTONS */
+.btn-buy-sm {
+    font-size: 12px;
+    padding: 6px 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    color: var(--text-on-gold);
+    background: var(--gold-button);
+    border: none;
+    transition: all 0.2s;
+}
+.btn-buy-sm:hover { filter: brightness(1.05); }
+
+.btn-outline-gold {
+    border: 1px solid var(--gold-button);
+    color: var(--gold-button);
+    background: transparent;
+    font-size: 12px;
+    padding: 6px 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+.btn-outline-gold:hover {
+    background: var(--gold-button);
+    color: var(--text-on-gold);
+}
+
+/* 7. RESPONSIVE IMPROVEMENTS */
+@media (max-width: 991px) {
+    .tab-btn { font-size: 14px; margin-right: 10px; padding-bottom: 8px; }
+    .filter-btn { font-size: 12px; padding: 4px 10px; }
+    .asset-name-text { font-size: 13px; }
+    .trend-bar { height: 3px; }
+    .btn-buy-sm, .btn-outline-gold { font-size: 11px; padding: 4px 12px; }
+}
